@@ -1,0 +1,162 @@
+/* 
+    Luka Rurua
+    27/01/2024
+    Main css for whole website
+*/
+
+/* Adds font Newsreader */
+@font-face {
+    font-family: Newsreader;
+    src: url(../fonts/Newsreader/Newsreader-VariableFont_opsz\,wght.ttf);
+}
+/* Adds font Inter */
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+
+/* Changes background color of the whole website */
+body {
+    background-color: #FFFFFF;
+}
+/* Makes elements inside header flexible, and gives them space in between to move them far apart */
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* Changes the color of the website title and gives it different font, also moves text away from left side */
+header h1 {
+    margin-left: 25px;
+    color: #426B1F;
+    font-family: 'Newsreader';
+    font-weight: 500;
+}
+/* Hides dropdown menu while screen is big */
+.dropbtn
+{
+    display: none;
+}
+/*  */
+#active {
+    padding: 12px 16px;
+    background-color: #3852219a;
+    border-radius: 4px;
+    color: white;
+}
+/* Aligns nav menu horizontally, also moves text away from right */
+header nav li {
+    display: inline;
+    margin-right: 25px;
+
+}
+/* Removes underline from text and changes color of the text to black */
+header nav li a {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #000000; 
+}
+/* Gives element with button id different text color, changes background color, more space around and adds round corners */
+.button {
+    padding: 15px;
+    background-color: #426B1F;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+
+@media screen and (max-width:833px) {
+
+    /* Gives buton background color, text-size,space around and changes mouse cursor to pointer*/
+    .dropbtn {
+        display: block;
+        margin-right: 25px;
+        font-size: 28px;
+        background-color: #426B1F;
+        color: white;
+        padding: 8px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* removes default margin when screen is small */
+    header nav li {
+        margin-right: 0;
+    }
+
+    /* Gives menu specific position on screen and adds border around it */
+    .dropdown-content {
+        /* removes default padding on the left side */
+        padding-inline-start: 0;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 12px;
+        background-color: #E6E6E6;
+        min-width: 147px;
+        border-radius: 15px;
+        border: #000000 solid 1px;
+    }
+
+    /* Gives each link default size, text color and puts them in center */
+    .dropdown-content li {
+        text-align: center;
+        color: white;
+        padding: 12px 0px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* changes background color when hovering over text */
+    .dropdown-content a:hover {
+        background-color: #315017;
+        padding: 7px 20px;
+        border-radius: 4px;
+        color: white;
+    }
+
+    /* changes display from none to block to show menu content */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* makes button for basket smaller to fit rest of the menu items */
+    .button {
+        padding: 7px;
+    }
+}
+@media screen and (max-width:785px) {
+
+    article#images>img {
+        max-width: 250px;
+    }
+    article#images figure img {
+        max-width: 350px;
+    }
+    article#text {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:670px) {
+    article#images>img {
+        max-width: 150px;
+    }
+    article#images figure img {
+        max-width: 150px;
+    }
+    article#text {
+        flex-direction: column;
+    }
+}

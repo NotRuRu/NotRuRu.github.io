@@ -1,0 +1,106 @@
+/* 
+    Luka Rurua
+    27/01/2024
+    CSS for Products page
+*/
+
+/* gives extra space around the element and sets everything inside in vertically */
+main {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* gives each element space around it and sets them all horizontally */
+article#row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Gives round corners displays list horizontally and moves each li element 25px left */
+article#row li {
+
+    border-radius: 23px;
+    display: inline;
+    margin-right: 25px;
+}
+/* By using first-child it only applies to first li element */
+article#row li:first-child {
+
+    background-color: #426B1F;
+    padding: 12px;
+    color: white;
+}
+/* Adds a gray line for cosmetic purposes */
+div.line {
+    background-color: #E6E6E6;
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+/* Displays element with products class horizontally and gives elements inside even space */
+div.products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* Gives element article inside div with product class gray-ish border, round corners, shows elements inside vertically and gives them max width */
+div.products article {
+    border: solid 2px #E6E6E6;
+    background-color: #FAFAF5;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+/* Moves elements under image 10px under */
+div.products article img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 10px;
+}
+/* Moves h5 and p elements inside article */
+div.products article h5 ,p {
+    margin-top: 2px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+div.products article h5:nth-child(odd) {
+    color: #426B1F;
+}
+div.products article p {
+    color: #6D6D6D;
+    font-size: small;
+}
+
+@media screen and (max-width:1000px) {
+
+    div.products {
+        flex-direction: column;
+        align-items: center;
+    }
+    div.products article {
+        margin-bottom: 15px;
+    }
+    article#row li:first-child {
+
+        background-color: transparent;
+        padding: 0px;
+        color: black;
+    }
+    article#row li:last-child {
+
+        background-color:#426B1F;
+        padding: 15px;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+
+    article#row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

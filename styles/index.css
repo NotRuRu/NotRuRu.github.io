@@ -1,0 +1,49 @@
+/* 
+    Luka Rurua
+    27/01/2024
+    CSS for the index.html page
+*/
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+/* Gives h2 element bigger text size and changes its font */
+main article h2 {
+    text-align: center;
+    font-family: 'Newsreader';
+    font-size: 32px;
+    /* Gives space between letters */
+    letter-spacing: -1.28px;
+    /* gives each line its own height */
+    line-height: 120%;
+    font-weight: 400;
+}
+/* Changes color of the text and removes underline */
+h4.button a {
+    color: white;
+    text-decoration: none;
+}
+/* puts elements inside article in a row and puts them in the center */
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* gives image inside figure and the txt under it max width */
+figure img, figcaption
+{
+    max-width: 450px;
+}
+/* gives article with text id extra space on top */
+article#text {
+
+    margin-top: 66px;
+}
+/* Moves p element more on right side and gives it max width */
+article p {
+    margin-left: 50px;
+    max-width: 570px;
+}
